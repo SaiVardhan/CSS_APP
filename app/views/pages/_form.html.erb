@@ -1,0 +1,13 @@
+<%= simple_form_for(@page, remote: true) do |f| %>
+  <div class="field">
+    <%= f.label :bg_color %><br />
+    <%= f.text_field :bg_color %>
+  </div>
+  <div class="field">
+    <%= f.label :font %><br />
+    <%= f.text_field :font %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit", id: "createPageButton" %>
+  </div>
+<% end %>
