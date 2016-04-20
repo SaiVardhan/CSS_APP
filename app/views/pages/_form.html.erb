@@ -1,13 +1,19 @@
-<%= simple_form_for(@page, remote: true) do |f| %>
-  <div class="field">
-    <%= f.label :bg_color %><br />
-    <%= f.text_field :bg_color %>
+<%= simple_form_for(@page, html: { class: 'form-vertical' }, remote: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %><br />
+    <%= f.text_field :title,class:"form-control",size: 5 %>
   </div>
-  <div class="field">
+
+  <div class="form-group">
+    <%= f.label :bg_color %><br />
+    <%= f.text_field :bg_color, class:"form-control minicolors-input" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :font %><br />
-    <%= f.text_field :font %>
+    <%= f.text_field :font, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit", id: "createPageButton" %>
+    <%= f.submit "Submit", id: "createPageButton", class: "btn btn-default" %>
   </div>
 <% end %>

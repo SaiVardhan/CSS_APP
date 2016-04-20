@@ -1,2 +1,3 @@
-$('#content').css("background-color", "<%= current_user.pages.last.bg_color %>");
+$('#body_container').css("background-color", "<%= current_user.pages.last.bg_color %>");
+$('#content h1').text("<%= current_user.pages.last.title %>");
 $('#content').css("font-family", "<%= current_user.pages.last.font %>");

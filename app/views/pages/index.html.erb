@@ -1,9 +1,21 @@
-	HI Welome !!, <% if current_user %> Aboard <% else %> Please sign in.<% end%>
+	Hi Welcome !!, <% if current_user %> Aboard <% else %> Please sign in.<% end%>
+	
 	<%= render 'form' %>
 
   <br/>
 	
-	<div id='content'>
-		Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...
-		Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...Bla...
+	<% if current_user %>
+		<div id='content'>
+	 	<h1> <%= current_user.pages.last.title %> </h1>
+		 <p>
+				Manage room rates and availability across all channels from one powerful platform. With Travel Tripper's central reservations system, you'll get comprehensive hotel distribution with seamless connectivity to all major PMS/RMS services, as well as robust tools for pricing and revenue management.
+		</p>
+		</div>
+	 <% else %>
+	 	<div id='content'>
+	   <h1> Travel Trip Exercise </h1>
+		 <p>
+				Manage room rates and availability across all channels from one powerful platform. With Travel Tripper's central reservations system, you'll get comprehensive hotel distribution with seamless connectivity to all major PMS/RMS services, as well as robust tools for pricing and revenue management.
+		</p>
   </div>
+	 <% end %>

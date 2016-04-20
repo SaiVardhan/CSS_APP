@@ -12,6 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.minicolors
+//= require jquery.minicolors.simple_form
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+	$('#page_bg_color').minicolors({
+		theme: 'bootstrap'
+	});
+
+	$('#page_font').fontselect({
+  style: 'font-select',
+  placeholder: 'Select a font',
+  lookahead: 2
+});
+});

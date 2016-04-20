@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_action :authenticate_user!
+  
   def index
     @page = Page.new
     respond_to do |format|
@@ -26,6 +28,6 @@ class PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:bg_color, :font)
+    params.require(:page).permit(:bg_color, :font, :title)
   end
 end
